@@ -288,15 +288,19 @@ class _DrawingBoardState extends State<DrawingBoard> {
               ),
             ),
             IconButton(
+                color: Colors.black,
                 icon: const Icon(CupertinoIcons.arrow_turn_up_left),
                 onPressed: () => controller.undo()),
             IconButton(
+                color: Colors.black,
                 icon: const Icon(CupertinoIcons.arrow_turn_up_right),
                 onPressed: () => controller.redo()),
             IconButton(
+                color: Colors.black,
                 icon: const Icon(CupertinoIcons.rotate_right),
                 onPressed: () => controller.turn()),
             IconButton(
+                color: Colors.black,
                 icon: const Icon(CupertinoIcons.trash),
                 onPressed: () => controller.clear()),
           ],

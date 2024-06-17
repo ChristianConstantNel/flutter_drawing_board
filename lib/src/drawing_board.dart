@@ -2,8 +2,8 @@ import 'dart:math';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'drawing_controller.dart';
 
+import 'drawing_controller.dart';
 import 'helper/ex_value_builder.dart';
 import 'helper/get_size.dart';
 import 'paint_contents/circle.dart';
@@ -47,7 +47,10 @@ class DrawingBoard extends StatefulWidget {
     this.onInteractionUpdate,
     this.transformationController,
     this.alignment = Alignment.topCenter,
+    this.iconColor = Colors.black,
   });
+
+  final Color iconColor;
 
   /// 画板背景控件
   final Widget background;
@@ -97,26 +100,32 @@ class DrawingBoard extends StatefulWidget {
       Type currType, DrawingController controller) {
     return <DefToolItem>[
       DefToolItem(
+          color: Colors.black,
           isActive: currType == SimpleLine,
           icon: Icons.edit,
           onTap: () => controller.setPaintContent(SimpleLine())),
       DefToolItem(
+          color: Colors.black,
           isActive: currType == SmoothLine,
           icon: Icons.brush,
           onTap: () => controller.setPaintContent(SmoothLine())),
       DefToolItem(
+          color: Colors.black,
           isActive: currType == StraightLine,
           icon: Icons.show_chart,
           onTap: () => controller.setPaintContent(StraightLine())),
       DefToolItem(
+          color: Colors.black,
           isActive: currType == Rectangle,
           icon: CupertinoIcons.stop,
           onTap: () => controller.setPaintContent(Rectangle())),
       DefToolItem(
+          color: Colors.black,
           isActive: currType == Circle,
           icon: CupertinoIcons.circle,
           onTap: () => controller.setPaintContent(Circle())),
       DefToolItem(
+          color: Colors.black,
           isActive: currType == Eraser,
           icon: CupertinoIcons.bandage,
           onTap: () => controller.setPaintContent(Eraser(color: Colors.white))),
